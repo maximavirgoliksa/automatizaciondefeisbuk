@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Eliminar Amigos FB Auto",
+  "version": "1.0",
+  "description": "Script automatizado para eliminar amigos.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://*.facebook.com/*", "https://*.facebook.com/friends/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
